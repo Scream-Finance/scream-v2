@@ -84,9 +84,9 @@ export default function Header() {
                         </Button>
                         <Button href="/apps">Apps</Button>
                         <Button href="/dashboard">Dashboard</Button>
-                        <Button href="https://analytics.scream.sh">Analytics</Button>
                         <Button href="/lend">Lending</Button>
                         <Button href="/stake">Staking</Button>
+                        <Button href="https://v1.scream.sh" target="_blank">V1</Button>
 
                         <div className="hidden md:block text-shadow text-rainbow">
                             <a href="https://spookyswap.finance/swap?inputCurrency=FTM&outputCurrency=0xe0654c8e6fd4d733349ac7e09f6f23da256bf475" target="_blank" className="font-extrabold text-rainbow" rel="noreferrer">
