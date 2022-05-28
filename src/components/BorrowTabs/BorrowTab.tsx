@@ -146,7 +146,7 @@ export default function BorrowTab() {
             <div className="flex items-center justify-center">
                 <p className="flex-1 text-xl font-bold">Borrow Assets</p>
 
-                <Select placeholder="Assets" value={asset?.id} onChange={onChangeAsset}>
+                <Select placeholder="Assets" value={asset?.id} className="dropdown" onChange={onChangeAsset}>
                     {markets &&
                         markets.map((market) => (
                             <Select.Option value={market.id} key={market.id}>

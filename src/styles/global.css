@@ -355,3 +355,7 @@ tr:hover {
 .option:hover {
     background-color: #3a4954 !important;
 }
+
+.dropdown > .value:first-of-type:hover > .option {
+    background-color: transparent !important;
+}

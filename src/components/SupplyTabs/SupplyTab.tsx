@@ -127,7 +127,7 @@ export default function SupplyTab() {
             <div className="flex items-center justify-center">
                 <p className="flex-1 text-xl font-bold">Lend Assets</p>
 
-                <Select placeholder="Assets" value={asset?.id} onChange={onChangeAsset}>
+                <Select placeholder="Assets" className="dropdown" value={asset?.id} onChange={onChangeAsset}>
                     {markets &&
                         markets.map((market) => (
                             <Select.Option value={market.id} key={market.id}>

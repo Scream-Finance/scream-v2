@@ -123,7 +123,7 @@ export default function WithdrawTab() {
             <div className="flex items-center justify-center">
                 <p className="flex-1 text-xl font-bold">Withdraw Assets</p>
 
-                <Select placeholder="Assets" value={asset?.id} onChange={onChangeAsset}>
+                <Select placeholder="Assets" className="dropdown" value={asset?.id} onChange={onChangeAsset}>
                     {markets &&
                         markets.map((market) => (
                             <Select.Option value={market.id} key={market.id}>
