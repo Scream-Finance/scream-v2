@@ -35,15 +35,7 @@ export default function Header() {
     return (
         <>
             <div className="relative z-10 pb-1 bg-animated-rainbow">
-                <a
-                    href="https://pro.olympusdao.finance/?utm_source=scream&utm_medium=affiliate&utm_campaign=op-affiliate"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center max-w-5xl px-6 py-2 mx-auto font-mono text-xs font-extrabold md:px-12 md:py-0 group "
-                >
-                    <p Style="min-height: 4px">
-                    </p>
-                </a>
+                <p Style="min-height: 4px; max-height: 4px; height: 4px"></p>
 
                 <AnimatePresence>
                     {isExpanded && (
@@ -53,16 +45,6 @@ export default function Header() {
                                     <Link href="/apps" passHref>
                                         <a className="text-3xl font-extrabold">All Apps</a>
                                     </Link>
-                                    {/* <Link href="/" passHref> */}
-                                    <a
-                                        href="https://spookyswap.finance/swap?inputCurrency=FTM&outputCurrency=0xe0654c8e6fd4d733349ac7e09f6f23da256bf475"
-                                        target="_blank"
-                                        className="text-3xl font-extrabold text-rainbow"
-                                        rel="noreferrer"
-                                    >
-                                        Buy SCREAM
-                                    </a>
-                                    {/* </Link> */}
                                 </div>
                                 <div className="">
                                     <ConnectWalletButton type="rainbow" />
