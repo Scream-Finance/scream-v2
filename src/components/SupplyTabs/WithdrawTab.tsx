@@ -141,7 +141,7 @@ export default function WithdrawTab() {
                     Max
                 </Button>
                 <div className="flex-1">
-                    <Input label="Amount" type="number" size="large" width="100%" placeholder="Enter an amount" value={amount} onChange={onChangeAmount} />
+                    <Input label="Amount" size="large" width="100%" placeholder="Enter an amount" value={amount} onChange={onChangeAmount} />
                 </div>
                 <Button onClick={() => setShowSlider((_) => !_)} auto>
                     <i className={`fas fa-chevron-circle-${showSlider ? 'up' : 'down'}`} />

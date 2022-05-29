@@ -168,7 +168,7 @@ export default function RepayTab() {
                 </Button>
 
                 <div className="flex-1">
-                    <Input label="Amount" type="number" size="large" width="100%" placeholder="Enter an amount" value={amount} onChange={onChangeAmount} />
+                    <Input label="Amount" size="large" width="100%" placeholder="Enter an amount" value={amount} onChange={onChangeAmount} />
                 </div>
 
                 <Button onClick={() => setShowSlider((_) => !_)} auto>
