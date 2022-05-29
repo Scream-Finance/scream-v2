@@ -41,9 +41,7 @@ export default function Header() {
                     rel="noreferrer"
                     className="flex items-center max-w-5xl px-6 py-2 mx-auto font-mono text-xs font-extrabold md:px-12 md:py-0 group "
                 >
-                    <img className="hidden w-10 mr-4 md:block" src="/img/olympus.png" alt="" />
-                    <p>
-                        <span className="group-hover:underline">Click here</span> to obtain SCREAM at a discount by bonding SCREAM-FTM LP tokens at Olympus Pro!
+                    <p Style="min-height: 4px">
                     </p>
                 </a>
 
