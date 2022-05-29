@@ -83,8 +83,7 @@ export default function Header() {
                             <HomeIcon className="w-4" />
                         </Button>
                         <Button href="/apps">Apps</Button>
-                        <Button href="/dashboard">Dashboard</Button>
-                        {/* <Button href="https://analytics.scream.sh">Analytics</Button> */}
+                        <Button href="https://analytics.scream.sh">Analytics</Button>
                         <Button href="/lend">Lending</Button>
                         <Button href="/stake">Staking</Button>
                     <Button href="https://v1.scream.sh/lend" target="_blank">V1</Button>
