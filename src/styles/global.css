@@ -359,3 +359,7 @@ tr:hover {
 .dropdown > .value:first-of-type:hover > .option {
     background-color: transparent !important;
 }
+
+.thread-box {
+    color: #fff;
+}
