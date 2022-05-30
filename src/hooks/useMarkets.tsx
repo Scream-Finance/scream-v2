@@ -3,12 +3,13 @@ import BigNumber from 'bignumber.js'
 import { createContext, useContext, useEffect, useState } from 'react'
 import { useActiveWeb3React } from '.'
 import AssetSidebar from '../components/AssetSidebar'
-import { CONTRACT_PRICE_ORACLE_ABI, CONTRACT_PRICE_ORACLE_ADDRESS, CONTRACT_SCTOKEN_ABI, CONTRACT_SCTOKEN_ADDRESS, CONTRACT_TOKEN_ADDRESS, GRAPHQL_URL } from '../constants'
+import { CONTRACT_PRICE_ORACLE_ABI, CONTRACT_COMPTROLLER_ABI, CONTRACT_PRICE_ORACLE_ADDRESS, CONTRACT_SCTOKEN_ABI, CONTRACT_SCTOKEN_ADDRESS, CONTRACT_TOKEN_ADDRESS, CONTRACT_UNITROLLER_ADDRESS, GRAPHQL_URL } from '../constants'
 import { fetchBalances, getUnitrollerContract } from '../utils/ContractService'
 import multicall from '../utils/multicall'
 import useRefresh from './useRefresh'
+import { toEth } from '../utils'
 
-const calculateAPY = async (market, supplyRate, borrowRate, underlyingPrice, balances, assetsIn, account, provider) => {
+const calculateAPY = async (market, supplyRate, borrowRate, underlyingPrice, balances, assetsIn, borrowCap, supplyCap, account, provider) => {
     if (!market) {
         return false
     }
@@ -48,6 +49,8 @@ const calculateAPY = async (market, supplyRate, borrowRate, underlyingPrice, bal
             totalBorrowsUsd: total_borrows_usd,
             totalSupplyUsd: total_supply_usd,
             liquidityUsd: cash.times(underlyingPriceUSD).dp(2, 1).toNumber(),
+            borrowCap: toEth(borrowCap, market.underlyingDecimals),
+            supplyCap: toEth(supplyCap, market.underlyingDecimals),
             ...balances,
             collateral,
             icon: token.asset
@@ -137,12 +140,25 @@ function useMarketsInternal() {
                     name: 'getUnderlyingPrice',
                     params: [market.id]
                 }))
+                const getSupplyCaps = filteredMarkets.map((market) => ({
+                    address: CONTRACT_UNITROLLER_ADDRESS,
+                    name: 'supplyCaps',
+                    params: [market.id]
+                }))
+                const getBorrowCaps = filteredMarkets.map((market) => ({
+                    address: CONTRACT_UNITROLLER_ADDRESS,
+                    name: 'borrowCaps',
+                    params: [market.id]
+                }))
 
-                const [supplyRatePerBlocks, borrowRatePerBlocks, underlyingPriceUSDs] = await Promise.all([
+                const [supplyRatePerBlocks, borrowRatePerBlocks, underlyingPriceUSDs, supplyCaps, borrowCaps] = await Promise.all([
                     multicall(scTokenABI, supplyRatePerBlockCalls),
                     multicall(scTokenABI, borrowRatePerBlockCalls),
-                    multicall(JSON.parse(CONTRACT_PRICE_ORACLE_ABI), getUnderlyingPriceUsdCalls)
+                    multicall(JSON.parse(CONTRACT_PRICE_ORACLE_ABI), getUnderlyingPriceUsdCalls),
+                    multicall(JSON.parse(CONTRACT_COMPTROLLER_ABI), getSupplyCaps),
+                    multicall(JSON.parse(CONTRACT_COMPTROLLER_ABI), getBorrowCaps)
                 ])
+
 
                 let balances = null
                 if (account) {
@@ -150,7 +166,7 @@ function useMarketsInternal() {
                 }
                 const promises = []
                 for (let i = 0; i < filteredMarkets.length; i++) {
-                    promises.push(calculateAPY(filteredMarkets[i], supplyRatePerBlocks[i][0], borrowRatePerBlocks[i][0], underlyingPriceUSDs[i][0], balances ? balances[i] : {}, assetsIn, account, library))
+                    promises.push(calculateAPY(filteredMarkets[i], supplyRatePerBlocks[i][0], borrowRatePerBlocks[i][0], underlyingPriceUSDs[i][0], balances ? balances[i] : {}, assetsIn, borrowCaps[i][0], supplyCaps[i][0], account, library))
                 }
                 const calculatedMarkets = await Promise.all(promises)
                 console.log(calculatedMarkets)

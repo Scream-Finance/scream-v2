@@ -37,12 +37,12 @@ export default function AssetBreakdown({ open, asset, hide, token }) {
 
                         <div className="flex items-center">
                             <p className="flex-1">{token?.id?.toUpperCase()} Supply Cap</p>
-                            <p>{token?.id?.toUpperCase() == 'FUSD' ? '0' : token?.id?.toUpperCase() == 'DEI' ? '30 mil' : 'Unlimited'}</p>
+                            <p>{formatter(asset?.supplyCap)}</p>
                         </div>
 
                         <div className="flex items-center">
                             <p className="flex-1">{token?.id?.toUpperCase()} Borrow Cap</p>
-                            <p>{token?.id?.toUpperCase() == 'FUSD' ? '0' : 'Unlimited'}</p>
+                            <p>{formatter(asset?.borrowCap)}</p>
                         </div>
 
                         <div className="flex items-center">
