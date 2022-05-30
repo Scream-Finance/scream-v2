@@ -360,6 +360,6 @@ tr:hover {
     background-color: transparent !important;
 }
 
-.thread-box {
-    color: #fff;
+.thead-box {
+    color: #fff !important;
 }
