@@ -117,7 +117,7 @@ export default function App() {
             <Header />
             <StakeHeader veScreamData={veScreamData} />
 
-            <div className="flex justify-between my-16 shadow-xl md:my-12 xl:rounded-xl xl:mx-auto xl:max-w-5xl">
+            {/* <div className="flex justify-between my-16 shadow-xl md:my-12 xl:rounded-xl xl:mx-auto xl:max-w-5xl">
                 <button type="button" className="flex flex-col items-center w-1/2" onClick={() => setLockOrStake('lock')}>
                     <div className="py-2">Lock</div>
                     {lockOrStake === 'lock' && <div className="w-full h-2 bg-animated-rainbow xl:rounded-bl-xl" />}
@@ -126,7 +126,7 @@ export default function App() {
                     <div className="py-2">Stake</div>
                     {lockOrStake === 'stake' && <div className="w-full h-2 bg-animated-rainbow xl:rounded-br-xl" />}
                 </button>
-            </div>
+            </div> */}
 
             <div className="max-w-5xl px-6 pb-12 mx-auto md:px-12 md:pb-24">
                 <div className="space-y-6 md:space-y-12">
@@ -148,10 +148,16 @@ export default function App() {
                                     <div className="flex-1 p-2 shadow-xl md:col-span-2 rounded-xl bg-animated-rainbow">
                                         <div className="flex flex-col justify-between p-6 bg-white rounded-xl">
                                             <div className="mb-8">
-                                                <p className="text-lg">Lock SCREAM, Get veSCREAM and Voting Power</p>
-                                                <p className="text-4xl font-extrabold">
+                                                <p className="text-md">
                                                     {(maxApr / 52).toFixed(2)}% ~ {maxApr.toFixed(2)}% APR
                                                 </p>
+                                                <p className="text-2xl">
+                                                    veSCREAM is being deprecated, and rewards will slowly decrease to zero.
+                                                </p>
+                                                <p className="text-xl font-extrabold">
+                                                    Please do not extend any locks.
+                                                </p>
+
                                             </div>
 
                                             <div className={`flex flex-col xl:flex-row md:items-center xl:items-start w-full ${showModifyLock ? 'justify-between' : 'justify-center'}`}>
@@ -217,11 +223,11 @@ export default function App() {
                                                                 Withdraw Unlocked SCREAM
                                                             </Button>
                                                         </div>
-                                                        <div className="self-center w-full lg:w-3/4">
+                                                        {/* <div className="self-center w-full lg:w-3/4">
                                                             <Button loading={loading} onClick={() => setShowModifyLock(!showModifyLock)} style={{ width: '100%' }} auto type="default">
                                                                 ✎ Modify Lock
                                                             </Button>
-                                                        </div>
+                                                        </div> */}
                                                     </div>
                                                 </div>
 

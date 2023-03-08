@@ -57,7 +57,7 @@ export default function LaunchPad() {
                                 animate={{ opacity: [0, 1], x: ['-40%', '0%'], y: ['-40%', '0%'] }}
                                 className="block bg-white rounded-xl shadow-xl hover:shadow border-4 border-white hover:border-pink-200 transition ease-in-out duration-300 p-6 space-y-2"
                             >
-                                <p className="text-xl font-extrabold">Staking</p>
+                                <p className="text-xl font-extrabold">veScream</p>
                                 <p className="">Stake your SCREAM tokens. Earn sweet SCREAM rewards.</p>
                             </motion.a>
                         </Link>
@@ -124,10 +124,10 @@ export default function LaunchPad() {
                     </div> */}
                     <div className="flex whitespace-no-wrap overflow-auto ">
                         <div className="space-x-4">
-                            <a href="https://docs.scream.sh/" target="_blank" rel="noreferrer">
+                            <a href="https://balsam-koala-e9a.notion.site/Scream-Docs-debc64f10b084827873874d56801bd22/" target="_blank" rel="noreferrer">
                                 Documentation
                             </a>
-                            {/* <a href="https://docs.scream.sh/" target="_blank" rel="noreferrer"> */}
+                            {/* <a href="https://balsam-koala-e9a.notion.site/Scream-Docs-debc64f10b084827873874d56801bd22/" target="_blank" rel="noreferrer"> */}
                             {/* </a> */}
                             {/* <a className="font-medium" href="# ">
                                 Contact Us

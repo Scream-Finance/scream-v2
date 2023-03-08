@@ -25,7 +25,7 @@ export default function Footer() {
                     <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
                         <div className="space-y-4 text-white">
                             <img className="w-60" src="/img/scream-logotype.png" alt="" />
-                            <p className="opacity-50 text-lg">Scream was established in 2021 by a team of passionate engineers spread across the globe to empower financial freedom.</p>
+                            {/* <p className="opacity-50 text-lg">Scream was established in 2021 by a team of passionate engineers spread across the globe to empower financial freedom.</p> */}
                         </div>
                         <div />
                     </div>
@@ -49,7 +49,7 @@ export default function Footer() {
                         <a className="opacity-50 hover:opacity-75" href={process.env.NEXT_PUBLIC_MEDIUM_URL} target="_blank" rel="noreferrer">
                             <i className="fab fa-medium" />
                         </a>
-                        <a href="https://docs.scream.sh" target="_blank" className="text-xs font-mono underline hover:no-underline opacity-50 hover:opacity-75 md:ml-4" rel="noreferrer">
+                        <a href="https://balsam-koala-e9a.notion.site/Scream-Docs-debc64f10b084827873874d56801bd22" target="_blank" className="text-xs font-mono underline hover:no-underline opacity-50 hover:opacity-75 md:ml-4" rel="noreferrer">
                             Documentation
                         </a>
                     </div>
