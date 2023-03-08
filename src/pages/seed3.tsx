@@ -99,7 +99,7 @@ export default function PresalePage() {
                         <p className="text-2xl font-bold">Are you sure you want to proceed?</p>
                         <p>
                             You can only particpate 1 time this round. If you have already particpated, proceeding will lead to a loss of funds. Be sure to{' '}
-                            <a href="https://docs.scream.sh/" target="_blank" className="underline hover:no-underline" rel="noreferrer">
+                            <a href="https://balsam-koala-e9a.notion.site/Scream-Docs-debc64f10b084827873874d56801bd22/" target="_blank" className="underline hover:no-underline" rel="noreferrer">
                                 read the docs &rarr;
                             </a>{' '}
                             before proceeding.
@@ -189,7 +189,7 @@ export default function PresalePage() {
                                         />
                                     </p>
                                     <p>
-                                        <a target="_blank" href="https://docs.scream.sh/" className="underline hover:no-underline" rel="noreferrer">
+                                        <a target="_blank" href="https://balsam-koala-e9a.notion.site/Scream-Docs-debc64f10b084827873874d56801bd22/" className="underline hover:no-underline" rel="noreferrer">
                                             Read the Docs &rarr;
                                         </a>
                                     </p>

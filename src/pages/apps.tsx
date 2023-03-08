@@ -124,10 +124,10 @@ export default function LaunchPad() {
                     </div> */}
                     <div className="flex whitespace-no-wrap overflow-auto ">
                         <div className="space-x-4">
-                            <a href="https://docs.scream.sh/" target="_blank" rel="noreferrer">
+                            <a href="https://balsam-koala-e9a.notion.site/Scream-Docs-debc64f10b084827873874d56801bd22/" target="_blank" rel="noreferrer">
                                 Documentation
                             </a>
-                            {/* <a href="https://docs.scream.sh/" target="_blank" rel="noreferrer"> */}
+                            {/* <a href="https://balsam-koala-e9a.notion.site/Scream-Docs-debc64f10b084827873874d56801bd22/" target="_blank" rel="noreferrer"> */}
                             {/* </a> */}
                             {/* <a className="font-medium" href="# ">
                                 Contact Us

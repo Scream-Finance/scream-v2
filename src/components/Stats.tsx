@@ -57,7 +57,7 @@ export default function Stats() {
                             <img className={classNames('w-8 inline-block', refreshing && 'animate-spin')} src="https://scream.sh/img/scream-multi.png" alt="" />
                         </div>
                         {/* <p className="text-right">
-                            <a href="https://docs.scream.sh/" target="_blank" className="text-xs font-mono opacity-50 underline hover:no-underline" rel="noreferrer">
+                            <a href="https://balsam-koala-e9a.notion.site/Scream-Docs-debc64f10b084827873874d56801bd22/" target="_blank" className="text-xs font-mono opacity-50 underline hover:no-underline" rel="noreferrer">
                                 Documentation
                             </a>
                         </p> */}

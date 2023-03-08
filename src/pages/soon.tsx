@@ -62,7 +62,7 @@ export default function App() {
                     </div>
 
                     <div className="text-2xl space-x-4">
-                        <a href="https://docs.scream.sh/" target="_blank" rel="noreferrer">
+                        <a href="https://balsam-koala-e9a.notion.site/Scream-Docs-debc64f10b084827873874d56801bd22/" target="_blank" rel="noreferrer">
                             <i className="fas fa-book" />
                         </a>
                         <a href="https://github.com/Scream-Finance/" target="_blank" rel="noreferrer">

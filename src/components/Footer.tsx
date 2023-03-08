@@ -49,7 +49,7 @@ export default function Footer() {
                         <a className="opacity-50 hover:opacity-75" href={process.env.NEXT_PUBLIC_MEDIUM_URL} target="_blank" rel="noreferrer">
                             <i className="fab fa-medium" />
                         </a>
-                        <a href="https://docs.scream.sh" target="_blank" className="text-xs font-mono underline hover:no-underline opacity-50 hover:opacity-75 md:ml-4" rel="noreferrer">
+                        <a href="https://balsam-koala-e9a.notion.site/Scream-Docs-debc64f10b084827873874d56801bd22" target="_blank" className="text-xs font-mono underline hover:no-underline opacity-50 hover:opacity-75 md:ml-4" rel="noreferrer">
                             Documentation
                         </a>
                     </div>
