@@ -152,7 +152,7 @@ export default function App() {
                                                     {(maxApr / 52).toFixed(2)}% ~ {maxApr.toFixed(2)}% APR
                                                 </p>
                                                 <p className="text-2xl">
-                                                    VeSCREAM is being deprecated, and rewards will slowly decrease to zero.
+                                                    veSCREAM is being deprecated, and rewards will slowly decrease to zero.
                                                 </p>
                                                 <p className="text-xl font-extrabold">
                                                     Please do not extend any locks.
