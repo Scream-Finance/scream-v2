@@ -148,10 +148,16 @@ export default function App() {
                                     <div className="flex-1 p-2 shadow-xl md:col-span-2 rounded-xl bg-animated-rainbow">
                                         <div className="flex flex-col justify-between p-6 bg-white rounded-xl">
                                             <div className="mb-8">
-                                                <p className="text-lg">Lock SCREAM, Get veSCREAM and Voting Power</p>
-                                                <p className="text-4xl font-extrabold">
+                                                <p className="text-md">
                                                     {(maxApr / 52).toFixed(2)}% ~ {maxApr.toFixed(2)}% APR
                                                 </p>
+                                                <p className="text-2xl">
+                                                    VeSCREAM is being deprecated, and rewards will slowly decrease to zero.
+                                                </p>
+                                                <p className="text-xl font-extrabold">
+                                                    Please do not extend any locks.
+                                                </p>
+
                                             </div>
 
                                             <div className={`flex flex-col xl:flex-row md:items-center xl:items-start w-full ${showModifyLock ? 'justify-between' : 'justify-center'}`}>

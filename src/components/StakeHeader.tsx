@@ -54,8 +54,8 @@ export default function StakeHeader({ veScreamData }: any) {
                 </div>
                 <motion.div className="relative bg-white rounded-xl p-6 shadow-xl space-y-6">
                     <div>
-                        <p className="text-5xl font-extrabold">Use Your SCREAM.</p>
-                        <p className="text-4xl lg:mb-6">Get votes to boost your pools and earn rewards.</p>
+                        <p className="text-5xl font-extrabold">SCREAM is evolving.</p>
+                        <p className="text-4xl lg:mb-6">Fully decentralized governance. Coming soon.</p>
                     </div>
 
                     <div className="flex flex-col lg:flex-row">
@@ -66,14 +66,16 @@ export default function StakeHeader({ veScreamData }: any) {
                                     <p className="text-xs py-1">By Locking</p>
                                     <p className="text-2xl font-extrabold text-right">${commas((+veScreamData?.rewardsLastWeek * screamPrice).toFixed(2))}</p>
                                     <p className="text-xs py-1">By veScream</p>
-                                    <p className="text-2xl font-extrabold text-right">${farmData && farmData[0] ? commas(((parseFloat(farmData[0]?.apy[3]) * farmData[0].tvl) / 5200).toFixed(2)) : 0}</p>
+                                    {/* <p className="text-2xl font-extrabold text-right">${farmData && farmData[0] ? commas(((parseFloat(farmData[0]?.apy[3]) * farmData[0].tvl) / 5200).toFixed(2)) : 0}</p> */}
+                                    <p className="text-2xl font-extrabold text-right">$0</p>
                                 </div>
                                 <div className="p-6 whitespace-nowrap md:w-1/2 lg:w-full">
                                     <p>Estimated APR</p>
                                     <p className="text-xs py-1">By Locking</p>
                                     <p className="text-2xl font-extrabold text-right">{maxApr.toFixed(2)}%</p>
                                     <p className="text-xs py-1">By veScream</p>
-                                    <p className="text-2xl font-extrabold text-right">{farmData[0] ? parseFloat(farmData[0]?.apy[3]).toFixed(2) : '0.00'}%</p>
+                                    <p className="text-2xl font-extrabold text-right">0%</p>
+                                    {/* <p className="text-2xl font-extrabold text-right">{farmData[0] ? parseFloat(farmData[0]?.apy[3]).toFixed(2) : '0.00'}%</p> */}
                                 </div>
                             </div>
                             <div className="rounded-xl shadow-xl p-6">
