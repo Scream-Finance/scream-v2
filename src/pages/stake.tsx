@@ -117,7 +117,7 @@ export default function App() {
             <Header />
             <StakeHeader veScreamData={veScreamData} />
 
-            <div className="flex justify-between my-16 shadow-xl md:my-12 xl:rounded-xl xl:mx-auto xl:max-w-5xl">
+            {/* <div className="flex justify-between my-16 shadow-xl md:my-12 xl:rounded-xl xl:mx-auto xl:max-w-5xl">
                 <button type="button" className="flex flex-col items-center w-1/2" onClick={() => setLockOrStake('lock')}>
                     <div className="py-2">Lock</div>
                     {lockOrStake === 'lock' && <div className="w-full h-2 bg-animated-rainbow xl:rounded-bl-xl" />}
@@ -126,7 +126,7 @@ export default function App() {
                     <div className="py-2">Stake</div>
                     {lockOrStake === 'stake' && <div className="w-full h-2 bg-animated-rainbow xl:rounded-br-xl" />}
                 </button>
-            </div>
+            </div> */}
 
             <div className="max-w-5xl px-6 pb-12 mx-auto md:px-12 md:pb-24">
                 <div className="space-y-6 md:space-y-12">
@@ -217,11 +217,11 @@ export default function App() {
                                                                 Withdraw Unlocked SCREAM
                                                             </Button>
                                                         </div>
-                                                        <div className="self-center w-full lg:w-3/4">
+                                                        {/* <div className="self-center w-full lg:w-3/4">
                                                             <Button loading={loading} onClick={() => setShowModifyLock(!showModifyLock)} style={{ width: '100%' }} auto type="default">
                                                                 ✎ Modify Lock
                                                             </Button>
-                                                        </div>
+                                                        </div> */}
                                                     </div>
                                                 </div>
 

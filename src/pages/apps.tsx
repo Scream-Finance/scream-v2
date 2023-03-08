@@ -57,7 +57,7 @@ export default function LaunchPad() {
                                 animate={{ opacity: [0, 1], x: ['-40%', '0%'], y: ['-40%', '0%'] }}
                                 className="block bg-white rounded-xl shadow-xl hover:shadow border-4 border-white hover:border-pink-200 transition ease-in-out duration-300 p-6 space-y-2"
                             >
-                                <p className="text-xl font-extrabold">Staking</p>
+                                <p className="text-xl font-extrabold">veScream</p>
                                 <p className="">Stake your SCREAM tokens. Earn sweet SCREAM rewards.</p>
                             </motion.a>
                         </Link>

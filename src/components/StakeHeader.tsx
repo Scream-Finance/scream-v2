@@ -65,14 +65,14 @@ export default function StakeHeader({ veScreamData }: any) {
                                     <p>Total Rewards Last Week</p>
                                     <p className="text-xs py-1">By Locking</p>
                                     <p className="text-2xl font-extrabold text-right">${commas((+veScreamData?.rewardsLastWeek * screamPrice).toFixed(2))}</p>
-                                    <p className="text-xs py-1">By Staking</p>
+                                    <p className="text-xs py-1">By veScream</p>
                                     <p className="text-2xl font-extrabold text-right">${farmData && farmData[0] ? commas(((parseFloat(farmData[0]?.apy[3]) * farmData[0].tvl) / 5200).toFixed(2)) : 0}</p>
                                 </div>
                                 <div className="p-6 whitespace-nowrap md:w-1/2 lg:w-full">
                                     <p>Estimated APR</p>
                                     <p className="text-xs py-1">By Locking</p>
                                     <p className="text-2xl font-extrabold text-right">{maxApr.toFixed(2)}%</p>
-                                    <p className="text-xs py-1">By Staking LP</p>
+                                    <p className="text-xs py-1">By veScream</p>
                                     <p className="text-2xl font-extrabold text-right">{farmData[0] ? parseFloat(farmData[0]?.apy[3]).toFixed(2) : '0.00'}%</p>
                                 </div>
                             </div>

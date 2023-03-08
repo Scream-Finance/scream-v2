@@ -41,11 +41,11 @@ export default function Header() {
                     {isExpanded && (
                         <motion.div initial={{ height: 0 }} animate={{ height: 'auto' }} exit={{ height: 0 }} className="flex flex-col overflow-hidden bg-white border-b md:hidden border-color-100">
                             <div className="p-6 space-y-4">
-                                <div className="flex flex-col space-y-2">
+                                {/* <div className="flex flex-col space-y-2">
                                     <Link href="/apps" passHref>
                                         <a className="text-3xl font-extrabold">All Apps</a>
                                     </Link>
-                                </div>
+                                </div> */}
                                 <div className="">
                                     <ConnectWalletButton type="rainbow" />
                                 </div>
@@ -62,11 +62,11 @@ export default function Header() {
                         <Button href="/">
                             <HomeIcon className="w-4" />
                         </Button>
-                        <Button href="/apps">Apps</Button>
+                        {/* <Button href="/apps">Apps</Button> */}
                         <Button href="https://analytics.scream.sh">Analytics</Button>
                         <Button href="/lend">Lending</Button>
-                        <Button href="/stake">Staking</Button>
-                    <Button href="https://v1.scream.sh/lend" target="_blank">V1</Button>
+                        <Button href="/stake">veScream</Button>
+                        <Button href="https://v1.scream.sh/lend" target="_blank">V1</Button>
                         <div className="flex-1" />
 
                         <div className="items-center hidden md:flex">

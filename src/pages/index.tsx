@@ -51,29 +51,17 @@ export default function App() {
                                             </div>
                                             <div className="text-left sm:text-right space-y-4">
                                                 <div>
-                                                    <Link href="/apps">
+                                                    <Link href="/lend">
                                                         <a className="block bg-animated-rainbow text-center font-bold rounded-3xl px-8 py-4 text-2xl w-full animate-ping text-white hover:shadow-xl transition ease-in-out duration-150 ">
                                                             <i className="fas fa-ghost mr-2 " />
                                                             <span>Open App</span>
                                                         </a>
                                                     </Link>
                                                 </div>
-                                                <div className="grid grid-cols-2 gap-4">
-                                                    <a
-                                                        href="https://docs.scream.sh/"
-                                                        target="_blank"
-                                                        className="bg-animated-rainbow font-medium rounded-3xl px-4 py-2 w-full animate-ping text-white hover:shadow-xl transition ease-in-out duration-150 text-center"
-                                                        rel="noreferrer"
-                                                    >
-                                                        <span>Docs</span>
+                                                <div>
+                                                    <a href="https://balsam-koala-e9a.notion.site/Scream-Docs-debc64f10b084827873874d56801bd22" target="_blank" className="block bg-animated-rainbow text-center font-bold rounded-3xl px-4 py-2 text-xl w-full animate-ping text-white hover:shadow-xl transition ease-in-out duration-150 ">
+                                                        <span>Documentation</span>
                                                     </a>
-                                                    <button
-                                                        onClick={() => setSubscribe((_) => !_)}
-                                                        type="button"
-                                                        className="bg-animated-rainbow font-medium rounded-3xl px-4 py-2 w-full animate-ping text-white hover:shadow-xl transition ease-in-out duration-150"
-                                                    >
-                                                        <span>Subscribe</span>
-                                                    </button>
                                                 </div>
                                             </div>
                                         </div>

@@ -9,7 +9,7 @@ export default function RewardsBubble() {
             <div className="p-6 bg-white shadow-xl rounded-2xl">
                 <div className="flex flex-col flex-wrap items-center space-x-2 space-y-2 md:flex-row md:space-y-0 md:space-x-2">
                     <div className="text-center md:text-left">
-                        <p className="text-xs font-mono">Current Rewards</p>
+                        <p className="text-xs font-mono">Claimable Allowance</p>
                         <p className="">
                             <span className="inline font-mono text-xs sm:text-base font-extrabold">{Number(rewardValue).toFixed(8)} SCREAM</span>
                             <img className="inline w-6 ml-2 animate-spin" src="/img/tokens/scream.png" alt="" />
@@ -17,7 +17,7 @@ export default function RewardsBubble() {
                     </div>
                     <div className="flex-1" />
                     <Button onClick={() => claimAll()} type="secondary" className="btn-primary" auto>
-                        Claim Your Rewards
+                        Claim
                     </Button>
                 </div>
             </div>

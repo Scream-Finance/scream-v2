@@ -3,18 +3,24 @@ import { Web3ReactProvider } from '@web3-react/core'
 import type { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+import { useState } from 'react'
 import Meta from '../components/Meta'
+import SafetyModal from '../components/SafetyModal'
+import TermsModal from '../components/TermsModal'
 import Web3ReactManager from '../components/Web3ReactManager'
 import { UseAlertsWrapper } from '../hooks/useAlerts'
+import { FarmDataWrapper } from '../hooks/useFarmData'
 import { MarketsWrapper } from '../hooks/useMarkets'
 import { GoogleAnalytics } from '../lib/ga'
 import '../styles/global.css'
 import getLibrary from '../utils/getLibrary'
-import { FarmDataWrapper } from '../hooks/useFarmData'
 
 const Web3ReactProviderDefault = dynamic(() => import('../components/Provider'), { ssr: false })
 
 export default function App({ Component, pageProps }: AppProps) {
+
+    const [showSafetyModal, setShowSafetyModal] = useState(true)
+
     return (
         <>
             <Head>
@@ -31,13 +37,14 @@ export default function App({ Component, pageProps }: AppProps) {
 
             <GoogleAnalytics />
 
-            <GeistProvider>
+            <GeistProvider themeType='dark'>
                 <Web3ReactProvider getLibrary={getLibrary}>
                     <Web3ReactProviderDefault getLibrary={getLibrary}>
                         <Web3ReactManager>
                             <MarketsWrapper>
                                 <FarmDataWrapper>
                                     <UseAlertsWrapper>
+                                        <SafetyModal open={showSafetyModal} hide={() => setShowSafetyModal(false)} />
                                         <Component {...pageProps} />
                                     </UseAlertsWrapper>
                                 </FarmDataWrapper>
