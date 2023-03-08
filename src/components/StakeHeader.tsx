@@ -55,7 +55,7 @@ export default function StakeHeader({ veScreamData }: any) {
                 <motion.div className="relative bg-white rounded-xl p-6 shadow-xl space-y-6">
                     <div>
                         <p className="text-5xl font-extrabold">SCREAM is evolving.</p>
-                        <p className="text-4xl lg:mb-6">Fully decentralized governance. Coming soon.</p>
+                        <p className="text-4xl lg:mb-6">Out with the old. In with the new.</p>
                     </div>
 
                     <div className="flex flex-col lg:flex-row">
