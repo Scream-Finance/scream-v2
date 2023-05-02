@@ -23,7 +23,8 @@ export default {
         tusd: '0x9879abdea01a879644185341f7af7d8343556b7a',
         spell: '0x468003b688943977e6130f4f68f23aad939a1040',
         boo: '0x841fad6eae12c286d1fd18d1d525dffa75c7effe',
-        dei: '0xde12c7959e1a72bbe8a5f7a1dc8f8eef9ab011b3'
+        dei: '0xde12c7959e1a72bbe8a5f7a1dc8f8eef9ab011b3',
+        wmlp: '0xFFf31B3b36be4892cCB45320Aa95B46c2216fDbF'
     },
     SCTOKEN: {
         wftm: '0xb681F4928658a8d54bd4773F5B5DEAb35d63c3CF',
@@ -50,6 +51,7 @@ export default {
         tusd: '0x789B5DBd47d7Ca3799f8E9FdcE01bC5E356fcDF1',
         spell: '0xB19b33fFf3A9B21F120B6aC585b8ce21635BEb96',
         boo: '0xA25f9FfD7855FC350A103D91ab7C906D6BF1977D',
-        dei: '0x68C102aBA11f5e086C999D99620C78F5Bc30eCD8'
+        dei: '0x68C102aBA11f5e086C999D99620C78F5Bc30eCD8',
+        wmlp: '0xCd38952cF9df52eF8EB3141a9B88E76dC859845b'
     }
 }
