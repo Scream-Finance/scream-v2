@@ -18,6 +18,13 @@ export const CONTRACT_FEE_DISTRIBUTION_ADDRESS = process.env.NEXT_PUBLIC_FEE_DIS
 
 // Token Contracts
 export const CONTRACT_TOKEN_ADDRESS = {
+    wmlp: {
+        id: 'wmlp',
+        symbol: 'wMLP',
+        address: contracts.TOKEN.wmlp,
+        asset: 'wmlp.png',
+        decimals: 18
+    },
     wftm: {
         id: 'wftm',
         symbol: 'WFTM',
@@ -175,6 +182,13 @@ export const CONTRACT_TOKEN_ADDRESS = {
 }
 
 export const CONTRACT_SCTOKEN_ADDRESS = {
+    swmlp: {
+        id: 'swmlp',
+        symbol: 'sWMLP',
+        address: contracts.SCTOKEN.wmlp,
+        asset: 'wmlp.png',
+        decimals: 8
+    },
     swftm: {
         id: 'swftm',
         symbol: 'sWFTM',
