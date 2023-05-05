@@ -29,7 +29,8 @@ const TOKEN_ABI = {
     tusd: constants.CONTRACT_TUSD_TOKEN_ABI,
     spell: constants.CONTRACT_SPELL_TOKEN_ABI,
     boo: constants.CONTRACT_FRAX_TOKEN_ABI,
-    dei : constants.CONTRACT_DEI_TOKEN_ABI
+    dei : constants.CONTRACT_DEI_TOKEN_ABI,
+    wmlp : constants.CONTRACT_WMLP_TOKEN_ABI
 }
 
 export const getContract = (address: string, abi: any, signer?: ethers.Signer | ethers.providers.Provider) => {
